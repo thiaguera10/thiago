@@ -1,0 +1,149 @@
+/* @import url("main.css"); */
+html {
+  scroll-behavior: smooth; }
+
+.desaparecer {
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 1s;
+  transform: translateX(-100%); }
+
+.aparecer {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 1s;
+  transform: translateX(0); }
+
+header {
+  background-color: #0d0c14;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%; }
+  header .logo {
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+    header .logo img {
+      width: 80%;
+      margin: 0;
+      padding: 0; }
+  header .links ul {
+    padding: 0; }
+  header .links a,
+  header .links a:hover {
+    color: #04c8cb;
+    text-decoration: none; }
+  header .links li {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    margin-right: 10px; }
+  header .links li:last-child {
+    margin-right: 0; }
+  header .links li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease; }
+  header .links li:hover:after {
+    width: 100%;
+    background: blue; }
+  header .links a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0 4px;
+    font-family: "Oswald", sans-serif; }
+
+body {
+  background-color: #0d0c14; }
+
+main {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF; }
+  main .pc,
+  main .destaquepc {
+    display: none; }
+  main .jogos {
+    padding-top: 150px; }
+    main .jogos h2 {
+      margin: 15px 10px; }
+  main .carrocelpc {
+    margin-top: 150px;
+    height: 200px;
+    margin-bottom: 20px; }
+  main .formulario textarea {
+    resize: none; }
+  main .formulario .contato {
+    margin-top: 20px;
+    font-family: "Oswald", sans-serif; }
+
+@media (min-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    text-align: justify;
+    padding: 0 30px;
+    position: fixed;
+    z-index: 2;
+    top: 0; }
+    header .logo img {
+      width: 26%;
+      margin: 0;
+      padding: 0;
+      margin: auto; }
+    header .links {
+      display: flex;
+      margin-top: 26px; }
+      header .links nav {
+        display: flex; }
+        header .links nav ul {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          header .links nav ul a {
+            font-size: 18px;
+            margin: 0 10px; }
+
+  main {
+    text-align: center; }
+    main .pc {
+      height: 580px; }
+      main .pc img {
+        height: 580px; }
+
+  #Destaquepc {
+    padding-top: 100px; }
+
+  .cardprincipal:nth-child(2) {
+    transition-delay: 400ms; }
+
+  .cardprincipal:nth-child(3) {
+    transition-delay: 700ms; }
+
+  .jogos:nth-child(2) {
+    transition-delay: 400ms; }
+
+  .jogos:nth-child(3) {
+    transition-delay: 700ms; }
+
+  .jogos:nth-child(4) {
+    transition-delay: 1000ms; }
+
+  .jogos:nth-child(5) {
+    transition-delay: 1300ms; }
+
+  .jogos:nth-child(6) {
+    transition-delay: 1600ms; } }
+
+/*# sourceMappingURL=style.css.map */

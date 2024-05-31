@@ -1,0 +1,310 @@
+@import url('main.css');
+
+$fundo: #0d0c14;
+$imagem: 80%;
+$letra: #FFFFFF;
+$fontecel: 11px;
+$fontepc: 20px;
+$zero: 0;
+$fonte: "Oswald", sans-serif;
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+//animacoes
+
+
+.desaparecer {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+.aparecer {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    background-color: $fundo;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+
+
+    width: 100%;
+
+
+
+
+    .logo {
+        padding: $zero;
+        margin: $zero;
+        width: 100%;
+
+        img {
+            width: $imagem;
+            margin: $zero;
+            padding: $zero;
+
+        }
+    }
+
+
+
+
+    .links {
+        ul {
+            padding: $zero;
+        }
+
+
+        a,
+        a:hover {
+            color: #04c8cb;
+            text-decoration: none;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 3px;
+            margin-right: 10px;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
+        li:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 3px;
+            width: 0px;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+        }
+
+        li:hover:after {
+            width: 100%;
+            background: blue;
+        }
+
+
+
+        a {
+
+            font-size: $fontecel;
+            text-decoration: none;
+            color: $letra;
+            margin: 0 4px;
+            font-family: "Oswald", sans-serif;
+
+
+        }
+
+
+    }
+}
+
+// PARTE PRINCIPAL
+
+
+
+body {
+    background-color: $fundo;
+}
+
+main {
+
+    font-family: $fonte;
+    color: $letra;
+
+    .pc,
+    .destaquepc {
+        display: none;
+    }
+
+
+    .jogos {
+        padding-top: 150px;
+
+        h2 {
+            margin: 15px 10px;
+        }
+
+
+    }
+
+    .carrocelpc {
+        margin-top: 150px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .formulario {
+        textarea {
+            resize: none;
+        }
+
+        .contato {
+            padding-top: 1px;
+            margin-top: 20px;
+            font-family: $fonte ;
+
+        }
+
+    }
+
+    .destaques {}
+
+
+}
+
+//footer
+
+
+
+
+@media (min-width:600px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: $zero;
+        text-align: justify;
+        padding: 0 30px;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+
+
+
+        .logo {
+            img {
+                width: 26%;
+                margin: $zero;
+                padding: $zero;
+                margin: auto;
+            }
+        }
+
+        .links {
+            display: flex;
+            margin-top: 26px;
+
+
+
+
+            nav {
+                display: flex;
+
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+
+                    a {
+                        font-size: 18px;
+                        margin: 0 10px;
+                    }
+                }
+
+
+            }
+        }
+
+
+
+    }
+
+    // main
+
+    main {
+        text-align: center;
+
+        .pc {
+            height: 580px;
+
+            img {
+                height: 580px;
+
+            }
+        }
+    }
+
+    #Destaquepc {
+        padding-top: 100px;
+    }
+
+
+
+
+
+
+
+
+
+
+    .cardprincipal:nth-child(2) {
+        transition-delay: 400ms;
+
+    }
+
+    .cardprincipal:nth-child(3) {
+        transition-delay: 700ms;
+    }
+
+
+    .jogos:nth-child(2) {
+        transition-delay: 400ms;
+    }
+
+    .jogos:nth-child(3) {
+        transition-delay: 700ms;
+    }
+
+    .jogos:nth-child(4) {
+        transition-delay: 1000ms;
+    }
+
+    .jogos:nth-child(5) {
+        transition-delay: 1300ms;
+    }
+
+    .jogos:nth-child(6) {
+        transition-delay: 1600ms;
+    }
+
+
+
+
+
+
+
+}
